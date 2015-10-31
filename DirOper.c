@@ -30,7 +30,7 @@ typedef UINT8         BOOL;
  
 // 函数声明
 BOOL MyDirExists(UINT8 *pszDirectory);
-void   MyDirCreate(UINT8*pszDirectory);
+void MyDirCreate(UINT8*pszDirectory);
 BOOL MyForceDirCreate(UINT8 *pszDirectory);
  
  
