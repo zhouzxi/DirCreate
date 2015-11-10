@@ -62,9 +62,9 @@ BOOL MyDirExists(UINT8 *pszDirectory)
    
     strncpy((char*)szDirectory, (char *)pszDirectory, sizeof(szDirectory) - 1);
    
-    if(szDirectory[strlen(szDirectory)-1] == cSep)         // 双目录符号
+    if (szDirectory[strlen(szDirectory)-1] == cSep)         // 双目录符号
     {
-        pBegin =strrchr(szDirectory, (int)cSep);
+        pBegin = strrchr(szDirectory, (int)cSep);
         if (NULL != pBegin)
         {
             pBegin[0] = 0;
@@ -160,7 +160,7 @@ BOOL MyForceDirCreate(UINT8 *pszDirectory)
         strncpy(szDirectory,pszDirectory, pszEnd-pszDirectory);
         pszStart = pszEnd +1;
 
-        if(!MyDirExists((UINT8*)szDirectory))
+        if (!MyDirExists((UINT8*)szDirectory))
         {
            MyDirCreate(szDirectory);
         }
@@ -194,11 +194,11 @@ INT32 main(void)
         {
              printf("Create directory %ssuccessfully!\n", szDirectory);
         }
-         else
-         {
+        else
+        {
              printf("Create directory %sfailed!\n", szDirectory);
              return -1;
-         }
+        }
     }
     else
     {
